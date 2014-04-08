@@ -63,3 +63,326 @@ Migrating to CreateLinks (20140408211052)
   [1m[35mSQL (0.7ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20140408211052"]]
   [1m[36m (0.8ms)[0m  [1mCOMMIT[0m
   [1m[35mActiveRecord::SchemaMigration Load (0.2ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+
+
+Started GET "/" for 127.0.0.1 at 2014-04-08 18:08:54 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 270ms (Views: 251.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-04-08 18:08:55 -0400
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2014-04-08 18:08:55 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-04-08 18:08:55 -0400
+
+
+Started GET "/assets/links.js?body=1" for 127.0.0.1 at 2014-04-08 18:08:55 -0400
+
+
+Started GET "/assets/links.css?body=1" for 127.0.0.1 at 2014-04-08 18:08:55 -0400
+
+
+Started GET "/assets/user.css?body=1" for 127.0.0.1 at 2014-04-08 18:08:55 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-04-08 18:08:55 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-04-08 18:08:55 -0400
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2014-04-08 18:08:55 -0400
+
+
+Started GET "/assets/user.js?body=1" for 127.0.0.1 at 2014-04-08 18:08:55 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-04-08 18:08:55 -0400
+
+
+Started GET "/users/new" for 127.0.0.1 at 2014-04-08 18:08:58 -0400
+Processing by UsersController#new as HTML
+  Rendered users/_form.html.erb (25.5ms)
+  Rendered users/new.html.erb within layouts/application (31.7ms)
+Completed 200 OK in 51ms (Views: 39.4ms | ActiveRecord: 2.1ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2014-04-08 18:09:09 -0400
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"1MuwevUJ6r903nNIpRE85nSvXJ56wV6RUbqQlurb74w=", "user"=>{"name"=>"spencer", "email"=>"spencer@spencer", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Create User"}
+Completed 500 Internal Server Error in 5ms
+
+NoMethodError (undefined method `admin?' for #<UsersController:0x007fb54fcd5508>):
+  app/controllers/users_controller.rb:64:in `user_params'
+  app/controllers/users_controller.rb:19:in `create'
+
+
+  Rendered /Users/tommythreadcraft/.rbenv/versions/2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.9ms)
+  Rendered /Users/tommythreadcraft/.rbenv/versions/2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.erb (11.2ms)
+  Rendered /Users/tommythreadcraft/.rbenv/versions/2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.5ms)
+  Rendered /Users/tommythreadcraft/.rbenv/versions/2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (37.9ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2014-04-08 18:09:39 -0400
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"1MuwevUJ6r903nNIpRE85nSvXJ56wV6RUbqQlurb74w=", "user"=>{"name"=>"spencer", "email"=>"spencer@spencer", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Create User"}
+Completed 500 Internal Server Error in 105ms
+
+NoMethodError (undefined method `balance=' for #<User:0x007fb54c2b0788>):
+  app/controllers/users_controller.rb:20:in `create'
+
+
+  Rendered /Users/tommythreadcraft/.rbenv/versions/2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.7ms)
+  Rendered /Users/tommythreadcraft/.rbenv/versions/2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.6ms)
+  Rendered /Users/tommythreadcraft/.rbenv/versions/2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.3ms)
+  Rendered /Users/tommythreadcraft/.rbenv/versions/2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (17.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2014-04-08 18:13:53 -0400
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"1MuwevUJ6r903nNIpRE85nSvXJ56wV6RUbqQlurb74w=", "user"=>{"name"=>"spencer", "email"=>"spencer@spencer", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Create User"}
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (21.9ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "name", "password_digest", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", Tue, 08 Apr 2014 22:13:53 UTC +00:00], ["email", "spencer@spencer"], ["name", "spencer"], ["password_digest", "$2a$10$pvlpuLIpKo.sK/s3cgASfuW590SYF84naSVFX5l.HhLvChsyvM/2i"], ["updated_at", Tue, 08 Apr 2014 22:13:53 UTC +00:00]]
+  [1m[35m (11.3ms)[0m  COMMIT
+Redirected to http://localhost:3000/users/1
+Completed 302 Found in 131ms (ActiveRecord: 35.2ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2014-04-08 18:13:53 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.9ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", "1"]]
+  Rendered users/show.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 15ms (Views: 11.4ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-04-08 18:13:54 -0400
+
+
+Started GET "/assets/links.css?body=1" for 127.0.0.1 at 2014-04-08 18:13:54 -0400
+
+
+Started GET "/assets/user.css?body=1" for 127.0.0.1 at 2014-04-08 18:13:54 -0400
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2014-04-08 18:13:54 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-04-08 18:13:54 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-04-08 18:13:54 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-04-08 18:13:54 -0400
+
+
+Started GET "/assets/links.js?body=1" for 127.0.0.1 at 2014-04-08 18:13:54 -0400
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2014-04-08 18:13:54 -0400
+
+
+Started GET "/assets/user.js?body=1" for 127.0.0.1 at 2014-04-08 18:13:54 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-04-08 18:13:54 -0400
+
+
+Started GET "/users" for 127.0.0.1 at 2014-04-08 18:13:58 -0400
+Processing by UsersController#index as HTML
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users"
+  Rendered users/index.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 12ms (Views: 10.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2014-04-08 18:14:00 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", "1"]]
+  Rendered users/show.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 12ms (Views: 9.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users/1/edit" for 127.0.0.1 at 2014-04-08 18:14:01 -0400
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.5ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", "1"]]
+Completed 500 Internal Server Error in 9ms
+
+NoMethodError (undefined method `admin?' for #<UsersController:0x007fb54df09498>):
+  app/controllers/users_controller.rb:27:in `edit'
+
+
+  Rendered /Users/tommythreadcraft/.rbenv/versions/2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.7ms)
+  Rendered /Users/tommythreadcraft/.rbenv/versions/2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.1ms)
+  Rendered /Users/tommythreadcraft/.rbenv/versions/2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.0ms)
+  Rendered /Users/tommythreadcraft/.rbenv/versions/2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (17.9ms)
+
+
+Started GET "/users/1/edit" for 127.0.0.1 at 2014-04-08 18:14:01 -0400
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", "1"]]
+Completed 500 Internal Server Error in 7ms
+
+NoMethodError (undefined method `admin?' for #<UsersController:0x007fb54d9ba3c0>):
+  app/controllers/users_controller.rb:27:in `edit'
+
+
+  Rendered /Users/tommythreadcraft/.rbenv/versions/2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.6ms)
+  Rendered /Users/tommythreadcraft/.rbenv/versions/2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.2ms)
+  Rendered /Users/tommythreadcraft/.rbenv/versions/2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.8ms)
+  Rendered /Users/tommythreadcraft/.rbenv/versions/2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (18.5ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2014-04-08 18:17:19 -0400
+Processing by UsersController#index as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users"
+  Rendered users/index.html.erb within layouts/application (8.7ms)
+Completed 200 OK in 18ms (Views: 11.7ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-04-08 18:17:19 -0400
+
+
+Started GET "/assets/links.css?body=1" for 127.0.0.1 at 2014-04-08 18:17:19 -0400
+
+
+Started GET "/assets/user.css?body=1" for 127.0.0.1 at 2014-04-08 18:17:19 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-04-08 18:17:20 -0400
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2014-04-08 18:17:20 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-04-08 18:17:20 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-04-08 18:17:20 -0400
+
+
+Started GET "/assets/links.js?body=1" for 127.0.0.1 at 2014-04-08 18:17:20 -0400
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2014-04-08 18:17:20 -0400
+
+
+Started GET "/assets/user.js?body=1" for 127.0.0.1 at 2014-04-08 18:17:20 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-04-08 18:17:20 -0400
+
+
+Started GET "/users/1" for 127.0.0.1 at 2014-04-08 18:17:24 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", "1"]]
+  Rendered users/show.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 9ms (Views: 6.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/users/1/edit" for 127.0.0.1 at 2014-04-08 18:17:34 -0400
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.7ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", "1"]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 6ms (ActiveRecord: 0.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-04-08 18:17:34 -0400
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 7ms (Views: 6.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/sessions" for 127.0.0.1 at 2014-04-08 18:17:46 -0400
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"1MuwevUJ6r903nNIpRE85nSvXJ56wV6RUbqQlurb74w=", "email"=>"spencer@spencer", "password"=>"[FILTERED]", "commit"=>"login"}
+  [1m[36mUser Load (24.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."email" = 'spencer@spencer' LIMIT 1[0m
+Redirected to http://localhost:3000/users/1
+Completed 302 Found in 114ms (ActiveRecord: 24.3ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2014-04-08 18:17:46 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", "1"]]
+  Rendered users/show.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 10ms (Views: 6.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-04-08 18:17:46 -0400
+
+
+Started GET "/assets/user.css?body=1" for 127.0.0.1 at 2014-04-08 18:17:46 -0400
+
+
+Started GET "/assets/links.css?body=1" for 127.0.0.1 at 2014-04-08 18:17:46 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-04-08 18:17:46 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-04-08 18:17:46 -0400
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2014-04-08 18:17:46 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-04-08 18:17:46 -0400
+
+
+Started GET "/assets/links.js?body=1" for 127.0.0.1 at 2014-04-08 18:17:46 -0400
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2014-04-08 18:17:46 -0400
+
+
+Started GET "/assets/user.js?body=1" for 127.0.0.1 at 2014-04-08 18:17:46 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-04-08 18:17:46 -0400
+
+
+Started GET "/users/1/edit" for 127.0.0.1 at 2014-04-08 18:17:50 -0400
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", "1"]]
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered users/edit.html.erb within layouts/application (1.1ms)
+Completed 500 Internal Server Error in 7ms
+
+SyntaxError (/Users/tommythreadcraft/WDI/projects/red.t/Redt/app/views/users/edit.html.erb:15: syntax error, unexpected keyword_ensure, expecting end-of-input):
+  app/controllers/users_controller.rb:28:in `edit'
+
+
+  Rendered /Users/tommythreadcraft/.rbenv/versions/2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.5ms)
+  Rendered /Users/tommythreadcraft/.rbenv/versions/2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.5ms)
+  Rendered /Users/tommythreadcraft/.rbenv/versions/2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.3ms)
+  Rendered /Users/tommythreadcraft/.rbenv/versions/2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (20.2ms)
+
+
+Started GET "/users/1/edit" for 127.0.0.1 at 2014-04-08 18:17:50 -0400
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", "1"]]
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered users/edit.html.erb within layouts/application (1.0ms)
+Completed 500 Internal Server Error in 7ms
+
+SyntaxError (/Users/tommythreadcraft/WDI/projects/red.t/Redt/app/views/users/edit.html.erb:15: syntax error, unexpected keyword_ensure, expecting end-of-input):
+  app/controllers/users_controller.rb:28:in `edit'
+
+
+  Rendered /Users/tommythreadcraft/.rbenv/versions/2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.8ms)
+  Rendered /Users/tommythreadcraft/.rbenv/versions/2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.2ms)
+  Rendered /Users/tommythreadcraft/.rbenv/versions/2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.1ms)
+  Rendered /Users/tommythreadcraft/.rbenv/versions/2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (21.9ms)

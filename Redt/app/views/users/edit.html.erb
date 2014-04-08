@@ -1,2 +1,14 @@
-<h1>User#edit</h1>
-<p>Find me in app/views/user/edit.html.erb</p>
+<h2>Edit Profile</h2>
+
+<%= render 'form' %>
+
+<!-- <p>
+  <strong>Balance:</strong>
+  <%# @user.display_balance %>
+  <%# form_tag("/user/addbalance", method: "post") do %>
+    <input type="submit" value="Add Balance">
+  <% end %>
+</p> -->
+
+<%= link_to 'Destroy', @user, method: :delete, data: { confirm: 'Are you sure?' } %>
+<%= link_to 'Back', users_path %>
