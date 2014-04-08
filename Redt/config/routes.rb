@@ -1,14 +1,17 @@
 Redt::Application.routes.draw do
-  get "sessions/new"
-  get "sessions/create"
-  get "sessions/destroy"
-  get "user/index"
-  get "user/show"
-  get "user/new"
-  get "user/create"
-  get "user/edit"
-  get "user/destroy"
-  get "user/update"
+
+  get "links/index"
+  get "links/show"
+  get "links/new"
+  get "links/edit"
+ get '/login', to: 'sessions#new'
+  post '/sessions', to: 'sessions#create'
+  get '/logout', to: 'sessions#destroy'
+
+  resources :users
+
+  root to: "sessions#new"
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
