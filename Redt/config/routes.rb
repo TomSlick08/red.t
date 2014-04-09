@@ -1,13 +1,11 @@
 Redt::Application.routes.draw do
 
-  get "links/index"
-  get "links/show"
-  get "links/new"
-  get "links/edit"
+  
  get '/login', to: 'sessions#new'
   post '/sessions', to: 'sessions#create'
   get '/logout', to: 'sessions#destroy'
 
+  resources :links
   resources :users
 
   root to: "sessions#new"

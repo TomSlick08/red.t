@@ -15,4 +15,10 @@
 
 <%= link_to 'Back', users_path %>
 
+<%= link_to 'Home', root_path %>
+<%= link_to 'Users Index', users_path %>
+<%= link_to 'Links Index', links_path %><br>
 
+<% @user.links.each do|link| %>
+<%= link.link_url %>
+<%end%>

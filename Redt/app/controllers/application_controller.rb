@@ -7,10 +7,16 @@ class ApplicationController < ActionController::Base
   helper_method :current_user
   helper_method :admin?
 
+  
   def current_user
     if session[:user_id]
       return User.find(session[:user_id])
     end
+  end
+
+
+ def require_authentication
+    redirect_to login_path unless current_user
   end
   
 end

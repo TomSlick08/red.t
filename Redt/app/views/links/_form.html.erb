@@ -1,0 +1,21 @@
+<%= form_for(@link) do |f| %>
+
+  <% if @link.errors.any? %>
+    Please correct the following errors:
+    <ul>
+      <% @link.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+    </ul>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :link_url %><br>
+    <%= f.text_field :link_url %>
+  </div>
+  
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+
+<% end %>
